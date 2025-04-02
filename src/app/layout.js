@@ -1,27 +1,28 @@
-import { Arvo, Lato } from "next/font/google";
+import { Rubik, Lato } from "next/font/google";
 import "./globals.css";
 import { SpeedInsights } from '@vercel/speed-insights/next';
+import MainLayout from "@/Components/MainLayout/MainLayout";
 
-const arvo = Arvo({
-  variable: "--font-arvo",
+const rubik = Rubik({
+  variable: "--font-primary",
   subsets: ["latin"],
   weight: ["400", "700"]
 });
 const lato = Lato({
-  variable: "--font-lato",
+  variable: "--font-secondary",
   subsets: ["latin"],
   weight: ["400", "700", "900"]
 });
 
 export const metadata = {
-  title: "Jubayer - MERN Stack Developer",
+  title: "Jubayer Codes - MERN Stack Developer",
   description: "Jubayer Codes - Crafting high-performance web applications with MERN stack. Passionate about clean code, scalable solutions, and seamless user experiences.",
 };
 
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <head>
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
@@ -29,9 +30,11 @@ export default function RootLayout({ children }) {
         <link rel="manifest" href="/site.webmanifest" />
       </head>
       <body
-        className={`${arvo.variable} ${lato.variable} antialiased`}
+        className={`${rubik.variable} ${lato.variable} antialiased`}
       >
-        {children}
+        <MainLayout>
+          {children}
+        </MainLayout>
         <SpeedInsights />
       </body>
     </html>
