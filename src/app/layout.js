@@ -1,4 +1,4 @@
-import { Rubik, Lato } from "next/font/google";
+import { Rubik, Lato, Arvo } from "next/font/google";
 import "./globals.css";
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import MainLayout from "@/Components/MainLayout/MainLayout";
@@ -8,6 +8,13 @@ const rubik = Rubik({
   subsets: ["latin"],
   weight: ["400", "700"]
 });
+
+const arvo = Arvo({
+  variable: "--font-primary",
+  subsets: ["latin"],
+  weight: ["400", "700"]
+});
+
 const lato = Lato({
   variable: "--font-secondary",
   subsets: ["latin"],
@@ -30,7 +37,7 @@ export default function RootLayout({ children }) {
         <link rel="manifest" href="/site.webmanifest" />
       </head>
       <body
-        className={`${rubik.variable} ${lato.variable} antialiased`}
+        className={`${arvo.variable} ${lato.variable} antialiased`}
       >
         <MainLayout>
           {children}
