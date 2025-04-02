@@ -1,7 +1,7 @@
 "use client"
 
 import React, { useEffect, useState } from 'react';
-import profileImg from "@/assets/img/jubayer.png"
+import profileImg from "@/assets/img/jubayer-codes.png"
 import Link from 'next/link';
 import { FaFacebookF, FaGithub, FaLinkedinIn } from "react-icons/fa";
 import { AnimatePresence, motion } from "framer-motion";
@@ -23,7 +23,7 @@ const Home = () => {
         <div>
             <div className="my-container flex gap-20 relative">
                 <aside className='profile-card w-1/3'>
-                    <img src={profileImg.src} alt="jubayer codes" className='profile-img' />
+                    <img src={profileImg.src} alt="jubayer codes Profile" className='profile-img' />
                     <div className="shape"></div>
                     <h3 className="title">Hello I'm <br /> Jubayer Hossain <br /> a
                         <AnimatePresence mode="wait">
