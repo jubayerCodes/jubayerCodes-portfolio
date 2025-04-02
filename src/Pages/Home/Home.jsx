@@ -5,9 +5,10 @@ import profileImg from "@/assets/img/jubayer.png"
 import Link from 'next/link';
 import { FaFacebookF, FaGithub, FaLinkedinIn } from "react-icons/fa";
 import { AnimatePresence, motion } from "framer-motion";
+import Introduction from '@/Components/Home/Introduction/Introduction';
+import "./Home.css"
 
-const MainLayout = ({ children }) => {
-
+const Home = () => {
     const headings = ["Developer", "Explorer"];
     const [index, setIndex] = useState(0);
 
@@ -24,7 +25,7 @@ const MainLayout = ({ children }) => {
                 <aside className='profile-card w-1/3'>
                     <img src={profileImg.src} alt="jubayer codes" className='profile-img' />
                     <div className="shape"></div>
-                    <h3 className="title">Hello I'm <br /> JUBAYER HOSSAIN <br /> a
+                    <h3 className="title">Hello I'm <br /> Jubayer Hossain <br /> a
                         <AnimatePresence mode="wait">
                             <motion.span
                                 key={index}
@@ -57,11 +58,11 @@ const MainLayout = ({ children }) => {
                     </ul>
                 </aside>
                 <div className='w-2/3'>
-                    {children}
+                    <Introduction />
                 </div>
             </div>
         </div>
     );
 };
 
-export default MainLayout;
+export default Home;

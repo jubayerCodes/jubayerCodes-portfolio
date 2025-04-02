@@ -1,0 +1,90 @@
+.profile-card {
+    border: 1px solid rgba(121, 121, 121, 0.09);
+    padding: 30px;
+    position: sticky;
+    top: 50px;
+    left: 0px;
+    height: fit-content;
+}
+
+.profile-card .profile-img {
+    background: rgb(255, 255, 255);
+    background: linear-gradient(0deg, rgb(0, 0, 0) 0%, rgba(255, 255, 255, 0.070) 100%);
+}
+
+.profile-card .shape {
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: var(--primary-color);
+    z-index: -1;
+}
+
+.profile-card::after {
+    content: "";
+    position: absolute;
+    left: 30px;
+    right: 30px;
+    bottom: 30px;
+    background: linear-gradient(0deg, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%);
+    z-index: 0;
+    height: calc(100% - 60px);
+    width: calc(100% - 60px);
+}
+
+.profile-card .title {
+    position: absolute;
+    left: 60px;
+    bottom: 50px;
+    font-size: 44px;
+    z-index: 5;
+    line-height: 1.4;
+}
+
+.profile-card .header-caption {
+    font-family: var(--font-primary);
+    color: var(--primary-color);
+    text-transform: capitalize;
+    font-weight: 700;
+}
+
+.profile-card .social-icon {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    justify-content: flex-start;
+    margin: -8px;
+    position: absolute;
+    left: 60px;
+    top: 60px;
+    width: 100%;
+    z-index: 1;
+    gap: 16px;
+}
+
+
+
+.profile-card .social-icon li a {
+    width: 48px;
+    background-color: #232324;
+    height: 48px;
+    line-height: 43px;
+    text-align: center;
+    display: inline-block;
+    border-radius: 100%;
+    transition: 0.3s;
+    color: #fff;
+    z-index: 2;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-card .social-icon li a:hover {
+    background-color: var(--primary-color);
+}

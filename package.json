@@ -9,10 +9,10 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@react-spring/web": "^9.7.5",
     "@studio-freight/lenis": "^1.0.42",
     "@vercel/speed-insights": "^1.2.0",
     "framer-motion": "^12.6.3",
-    "gsap": "^3.12.7",
     "locomotive-scroll": "^4.1.4",
     "next": "15.2.4",
     "react": "^19.0.0",

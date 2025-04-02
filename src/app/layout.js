@@ -1,8 +1,6 @@
 import { Rubik, Lato, Arvo } from "next/font/google";
 import "./globals.css";
 import { SpeedInsights } from '@vercel/speed-insights/next';
-import MainLayout from "@/Components/MainLayout/MainLayout";
-import SmoothScrollWrapper from "@/Components/SmoothScrollWrapper/SmoothScrollWrapper";
 
 const rubik = Rubik({
   variable: "--font-primary",
@@ -40,9 +38,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${arvo.variable} ${lato.variable} antialiased`}
       >
-        <MainLayout>
-          {children}
-        </MainLayout>
+        {children}
         <SpeedInsights />
       </body>
     </html>
