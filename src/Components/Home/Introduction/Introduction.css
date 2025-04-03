@@ -10,3 +10,7 @@
 #introduction .heading {
     font-size: 54px;
 }
+
+.experience-card h4{
+    font-family: var(--font-secondary);
+}

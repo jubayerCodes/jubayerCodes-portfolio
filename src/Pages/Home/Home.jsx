@@ -58,7 +58,7 @@ const Home = () => {
                         </li>
                     </ul>
                 </aside>
-                <div className='w-2/3'>
+                <div className='w-[900px]'>
                     <Introduction />
                 </div>
             </div>

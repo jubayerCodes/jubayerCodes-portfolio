@@ -4,6 +4,8 @@
   --primary-color: #FF014F;
   --background: #060606;
   --text-color: #9f9f9f;
+  --section-bg: #141414;
+  --section-bg2: #1b1b1c;
 }
 
 @theme inline {
@@ -53,4 +55,21 @@ body {
 
 .section {
   padding-top: 70px;
+}
+
+.card {
+  background: var(--section-bg2);
+  border-radius: 5px;
+  padding: 30px;
+  position: relative;
+  z-index: 50;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 2px;
+  background: var(--section-bg);
+  border-radius: 5px;
+  z-index: -10;
 }
