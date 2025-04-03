@@ -1,6 +1,7 @@
 import { Rubik, Lato, Arvo } from "next/font/google";
 import "./globals.css";
 import { SpeedInsights } from '@vercel/speed-insights/next';
+import { Analytics } from "@vercel/analytics/react"
 import Script from "next/script";
 import * as gtag from "@/utilities/gtag";
 
@@ -61,6 +62,7 @@ export default function RootLayout({ children }) {
         />
         {children}
         <SpeedInsights />
+        <Analytics />
       </body>
     </html>
   );
