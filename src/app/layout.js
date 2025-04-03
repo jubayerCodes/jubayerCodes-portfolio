@@ -1,6 +1,8 @@
 import { Rubik, Lato, Arvo } from "next/font/google";
 import "./globals.css";
 import { SpeedInsights } from '@vercel/speed-insights/next';
+import Script from "next/script";
+import * as gtag from "@/utilities/gtag";
 
 const rubik = Rubik({
   variable: "--font-primary",
@@ -38,6 +40,25 @@ export default function RootLayout({ children }) {
       <body
         className={`${arvo.variable} ${lato.variable} antialiased`}
       >
+        {/* Google Analytics Script */}
+        <Script
+          strategy="afterInteractive"
+          src={`https://www.googletagmanager.com/gtag/js?id=${gtag.GA_TRACKING_ID}`}
+        />
+        <Script
+          id="google-analytics"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${gtag.GA_TRACKING_ID}', {
+              page_path: window.location.pathname,
+            });
+          `,
+          }}
+        />
         {children}
         <SpeedInsights />
       </body>
