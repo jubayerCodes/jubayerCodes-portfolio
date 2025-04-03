@@ -6,27 +6,23 @@
 // gsap.registerPlugin(ScrollSmoother);
 
 // export default function SmoothScrollWrapper({ children }) {
-//     const wrapperRef = useRef(null);
-//     const contentRef = useRef(null);
+//     const scrollRef = useRef(null);
 
 //     useEffect(() => {
-//         if (typeof window !== "undefined" && wrapperRef.current && contentRef.current) {
-//             let smoother = ScrollSmoother.create({
-//                 wrapper: wrapperRef.current,
-//                 content: contentRef.current,
-//                 smooth: 2, // Adjust for smoother scrolling
-//                 effects: true, // Enables scroll-based animations
-//             });
+//         let smoother = ScrollSmoother.create({
+//             wrapper: scrollRef.current,
+//             content: scrollRef.current.children[0],
+//             smooth: 2, // Adjust smoothness (higher = smoother)
+//         });
 
-//             return () => {
-//                 if (smoother) smoother.kill();
-//             };
-//         }
+//         return () => {
+//             if (smoother) smoother.kill();
+//         };
 //     }, []);
 
 //     return (
-//         <div ref={wrapperRef} className="scroll-wrapper">
-//             <div ref={contentRef} className="scroll-content">{children}</div>
+//         <div ref={scrollRef} className="scroll-wrapper">
+//             <div className="scroll-content">{children}</div>
 //         </div>
 //     );
 // }

@@ -20,7 +20,7 @@ h6 {
   color: white;
 }
 
-.description {
+p {
   color: var(--text-color);
   font-family: var(--font-secondary);
   margin-top: 20px;

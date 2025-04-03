@@ -4,9 +4,9 @@ import React, { useEffect, useState } from 'react';
 import profileImg from "@/assets/img/jubayer-codes.png"
 import Link from 'next/link';
 import { FaFacebookF, FaGithub, FaLinkedinIn } from "react-icons/fa";
-import { AnimatePresence, motion } from "framer-motion";
 import Introduction from '@/Components/Home/Introduction/Introduction';
 import "./Home.css"
+import { Typewriter } from 'react-simple-typewriter';
 
 const Home = () => {
     const headings = ["Developer", "Explorer"];
@@ -26,7 +26,7 @@ const Home = () => {
                     <img src={profileImg.src} alt="jubayer codes Profile" className='profile-img' />
                     <div className="shape"></div>
                     <h3 className="title">Hello I'm <br /> Jubayer Hossain <br /> a
-                        <AnimatePresence mode="wait">
+                        {/* <AnimatePresence mode="wait">
                             <motion.span
                                 key={index}
                                 initial={{ opacity: 0, y: -20 }}
@@ -37,7 +37,8 @@ const Home = () => {
                             >
                                 {headings[index]}
                             </motion.span>
-                        </AnimatePresence>
+                        </AnimatePresence> */}
+                        <Typewriter words={headings} loop cursor cursorBlinking={false} cursorColor='#FF014F' />
                     </h3>
                     <ul className="social-icon">
                         <li>
