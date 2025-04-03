@@ -34,7 +34,6 @@ export default function RootLayout({ children }) {
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
         <link rel="manifest" href="/site.webmanifest" />
-        <meta name="msvalidate.01" content="C08E4976F7C6AFB7564D7A77C7549871" />
       </head>
       <body
         className={`${arvo.variable} ${lato.variable} antialiased`}
