@@ -7,17 +7,36 @@ import { FaFacebookF, FaGithub, FaLinkedinIn } from "react-icons/fa";
 import Introduction from '@/Components/Home/Introduction/Introduction';
 import "./Home.css"
 import { Typewriter } from 'react-simple-typewriter';
+import About from '@/Components/Home/About/About';
 
 const Home = () => {
     const headings = ["Developer", "Explorer"];
-    const [index, setIndex] = useState(0);
+    const [lastScrollY, setLastScrollY] = useState(0);
 
     useEffect(() => {
-        const interval = setInterval(() => {
-            setIndex((prev) => (prev + 1) % headings.length);
-        }, 5000);
-        return () => clearInterval(interval);
-    }, []);
+        const handleScroll = () => {
+            const currentScrollY = window.scrollY;
+
+            console.log(lastScrollY, currentScrollY);
+
+            // Ensure user is scrolling down and crosses 100px for the first time
+            if (lastScrollY < currentScrollY && currentScrollY >= 200) {
+                const aboutSection = document.getElementById("about");
+                if (aboutSection) {
+                    aboutSection.scrollIntoView({ behavior: "smooth" });
+                }
+            }
+
+            // Update last scroll position
+            setLastScrollY(currentScrollY);
+        };
+
+        window.addEventListener("scroll", handleScroll);
+
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
+    }, [lastScrollY]);
 
     return (
         <div>
@@ -26,18 +45,6 @@ const Home = () => {
                     <img src={profileImg.src} alt="jubayer codes Profile" className='profile-img' />
                     <div className="shape"></div>
                     <h3 className="title">Hello I'm <br /> Jubayer Hossain <br /> a
-                        {/* <AnimatePresence mode="wait">
-                            <motion.span
-                                key={index}
-                                initial={{ opacity: 0, y: -20 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                exit={{ opacity: 0, y: 20 }}
-                                transition={{ duration: 0.2 }}
-                                className="header-caption ms-1.5 absolute w-full"
-                            >
-                                {headings[index]}
-                            </motion.span>
-                        </AnimatePresence> */}
                         <Typewriter words={headings} loop cursor cursorBlinking={false} cursorColor='#FF014F' />
                     </h3>
                     <ul className="social-icon">
@@ -60,6 +67,7 @@ const Home = () => {
                 </aside>
                 <div className='w-[900px]'>
                     <Introduction />
+                    <About />
                 </div>
             </div>
         </div>

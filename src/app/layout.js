@@ -39,7 +39,7 @@ export default function RootLayout({ children }) {
         <link rel="manifest" href="/site.webmanifest" />
       </head>
       <body
-        className={`${arvo.variable} ${lato.variable} antialiased`}
+        className={`${rubik.variable} ${lato.variable} antialiased`}
       >
         {/* Google Analytics Script */}
         <Script

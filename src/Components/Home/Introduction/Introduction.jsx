@@ -31,7 +31,7 @@ const Introduction = () => {
 
             <Fade>
                 <h1 className='heading'>
-                    Say Hi from <span className='text-[var(--primary-color)] font-[700]'>Jubayer Codes</span>,
+                    Say Hi from <span className='text-[var(--primary-color)]'>Jubayer Codes</span>,
                 </h1>
                 <h2 className='heading'>
                     MERN Stack Web Solution
@@ -39,21 +39,20 @@ const Introduction = () => {
                 <p className="description">
                     I design and code beautifully simple things and i love what i do. Just simple like that!
                 </p>
-            </Fade>
-
-            <div className="experience-container flex gap-5 justify-between items-start mt-5">
-                {
-                    experience?.map((ex, idx) => (
-                        <div className='card experience-card w-1/2 flex justify-between items-start' key={idx}>
-                            <div>
-                                <h4 className='text-base capitalize mb-3'>{ex?.title}</h4>
-                                <img src={ex?.logo?.src} className='h-[26px]' alt="jubayer codes exp" />
+                <div className="experience-container flex gap-5 justify-between items-start mt-5">
+                    {
+                        experience?.map((ex, idx) => (
+                            <div className='card experience-card w-1/2 flex justify-between items-start' key={idx}>
+                                <div>
+                                    <h4 className='text-base capitalize mb-3'>{ex?.title}</h4>
+                                    <img src={ex?.logo?.src} className='h-[20px] grayscale-100' alt="jubayer codes exp" />
+                                </div>
+                                <div className="text-[var(--text-color)] capitalize text-white">{ex?.from} - {ex?.to}</div>
                             </div>
-                            <div className="text-[var(--text-color)] capitalize">{ex?.from} - {ex?.to}</div>
-                        </div>
-                    ))
-                }
-            </div>
+                        ))
+                    }
+                </div>
+            </Fade>
         </section>
     );
 };
