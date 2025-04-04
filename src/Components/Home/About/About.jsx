@@ -25,7 +25,7 @@ const About = () => {
     ]
 
     return (
-        <section className='section' id='about'>
+        <section className='section snap-start' id='about'>
             <SectionTitle icon={<FaRegUser />} title={"About me"} />
 
             <Fade>

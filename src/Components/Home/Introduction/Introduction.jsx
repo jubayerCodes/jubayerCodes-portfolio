@@ -8,7 +8,7 @@ import StarBorder from '@/Components/Shared/StarBorder/StarBorder';
 const Introduction = () => {
 
     return (
-        <section className='section' id='introduction'>
+        <section className='section snap-start' id='introduction'>
             <SectionTitle icon={<LuHouse />} title={"Introduce"} />
 
             <Fade>

@@ -8,35 +8,36 @@ import Introduction from '@/Components/Home/Introduction/Introduction';
 import "./Home.css"
 import { Typewriter } from 'react-simple-typewriter';
 import About from '@/Components/Home/About/About';
+import Skills from '@/Components/Home/Skills/Skills';
 
 const Home = () => {
     const headings = ["Developer", "Explorer"];
-    const [lastScrollY, setLastScrollY] = useState(0);
+    // const [lastScrollY, setLastScrollY] = useState(0);
 
-    useEffect(() => {
-        const handleScroll = () => {
-            const currentScrollY = window.scrollY;
+    // useEffect(() => {
+    //     const handleScroll = () => {
+    //         const currentScrollY = window.scrollY;
 
-            console.log(lastScrollY, currentScrollY);
+    //         console.log(lastScrollY, currentScrollY);
 
-            // Ensure user is scrolling down and crosses 100px for the first time
-            if (lastScrollY < currentScrollY && currentScrollY >= 200) {
-                const aboutSection = document.getElementById("about");
-                if (aboutSection) {
-                    aboutSection.scrollIntoView({ behavior: "smooth" });
-                }
-            }
+    //         // Ensure user is scrolling down and crosses 100px for the first time
+    //         if (lastScrollY < currentScrollY && currentScrollY >= 200) {
+    //             const aboutSection = document.getElementById("about");
+    //             if (aboutSection) {
+    //                 aboutSection.scrollIntoView({ behavior: "smooth" });
+    //             }
+    //         }
 
-            // Update last scroll position
-            setLastScrollY(currentScrollY);
-        };
+    //         // Update last scroll position
+    //         setLastScrollY(currentScrollY);
+    //     };
 
-        window.addEventListener("scroll", handleScroll);
+    //     window.addEventListener("scroll", handleScroll);
 
-        return () => {
-            window.removeEventListener("scroll", handleScroll);
-        };
-    }, [lastScrollY]);
+    //     return () => {
+    //         window.removeEventListener("scroll", handleScroll);
+    //     };
+    // }, [lastScrollY]);
 
     return (
         <div>
@@ -68,6 +69,7 @@ const Home = () => {
                 <div className='w-[900px]'>
                     <Introduction />
                     <About />
+                    <Skills />
                 </div>
             </div>
         </div>
