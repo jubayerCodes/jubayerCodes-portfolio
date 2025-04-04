@@ -34,7 +34,7 @@ const Introduction = () => {
                     Say Hi from <span className='text-[var(--primary-color)]'>Jubayer Codes</span>,
                 </h1>
                 <h2 className='heading'>
-                    MERN Stack Web Solution
+                    Crafting Scalable Web Apps
                 </h2>
                 <p className="description">
                     I design and code beautifully simple things and i love what i do. Just simple like that!

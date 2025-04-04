@@ -8,7 +8,7 @@ import * as gtag from "@/utilities/gtag";
 const rubik = Rubik({
   variable: "--font-primary",
   subsets: ["latin"],
-  weight: ["400", "700"]
+  weight: ["300", "400", "500", "600", "700", "800", "900"]
 });
 
 const arvo = Arvo({

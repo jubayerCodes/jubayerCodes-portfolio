@@ -71,3 +71,7 @@ body {
 .card:hover {
   transform: scale(1.03);
 }
+
+.section-heading {
+  @apply text-4xl font-medium
+}
