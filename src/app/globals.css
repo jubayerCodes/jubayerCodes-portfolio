@@ -6,6 +6,7 @@
   --text-color: #9f9f9f;
   --section-bg: #141414;
   --section-bg2: #1b1b1c;
+  --border-color: #ffffff14;
 }
 
 @theme inline {
@@ -74,4 +75,25 @@ body {
 
 .section-heading {
   @apply text-4xl font-medium
+}
+
+.btn {
+  padding: 8px 30px;
+  background: transparent;
+  color: var(--text-color);
+  font-size: 16px;
+  z-index: 1;
+  transition: all 0.4s ease-in-out;
+  border-radius: 6px;
+  font-family: var(--font-secondary);
+  text-transform: capitalize;
+  border: 2px solid var(--border-color);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+
+.btn:hover {
+  background: var(--primary-color);
+  color: white;
 }

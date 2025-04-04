@@ -2,15 +2,15 @@
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: stretch;
-    margin-top: 100px;
+    margin-top: -50px;
 }
 
 #introduction .heading {
     font-size: 54px;
 }
 
-.experience-card h4{
+.experience-card h4 {
     font-family: var(--font-secondary);
 }
