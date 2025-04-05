@@ -3,12 +3,11 @@ import React from 'react';
 import { LuHouse } from "react-icons/lu";
 import "./Introduction.css"
 import { Fade } from 'react-awesome-reveal';
-import StarBorder from '@/Components/Shared/StarBorder/StarBorder';
 
 const Introduction = () => {
 
     return (
-        <section className='section snap-start' id='introduction'>
+        <section className='section' id='introduction'>
             <SectionTitle icon={<LuHouse />} title={"Introduce"} />
 
             <Fade>
