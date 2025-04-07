@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from 'react';
 import profileImg from "@/assets/img/jubayer-codes.png"
+import palestineImg from "@/assets/img/palestine.webp"
 import Link from 'next/link';
 import { FaFacebookF, FaGithub, FaLinkedinIn } from "react-icons/fa";
 import Introduction from '@/Components/Home/Introduction/Introduction';
@@ -9,6 +10,7 @@ import "./Home.css"
 import { Typewriter } from 'react-simple-typewriter';
 import About from '@/Components/Home/About/About';
 import Skills from '@/Components/Home/Skills/Skills';
+import Portfolio from '@/Components/Home/Portfolio/Portfolio';
 
 const Home = () => {
     const headings = ["Developer", "Explorer"];
@@ -43,6 +45,7 @@ const Home = () => {
         <div>
             <div className="my-container flex gap-20 relative">
                 <aside className='profile-card w-1/3'>
+                    <img src={palestineImg.src} alt="jubayer codes Profile" className='profile-img' />
                     <img src={profileImg.src} alt="jubayer codes Profile" className='profile-img' />
                     <div className="shape"></div>
                     <h3 className="title">Hello I'm <br /> Jubayer Hossain <br /> a
@@ -70,6 +73,7 @@ const Home = () => {
                     <Introduction />
                     <About />
                     <Skills />
+                    <Portfolio />
                 </div>
             </div>
         </div>

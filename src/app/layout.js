@@ -1,4 +1,4 @@
-import { Rubik, Lato, Arvo } from "next/font/google";
+import { Rubik, Lato, Arvo, Rajdhani } from "next/font/google";
 import "./globals.css";
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Analytics } from "@vercel/analytics/react"
@@ -16,6 +16,12 @@ const arvo = Arvo({
   subsets: ["latin"],
   weight: ["400", "700"]
 });
+
+const rajdhani = Rajdhani({
+  variable: "--font-secondary",
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"]
+})
 
 const lato = Lato({
   variable: "--font-secondary",
